@@ -63,7 +63,7 @@ class Script(scripts.Script):
         try:
             if no_emb:
                 saved_db = sd_hijack.model_hijack.embedding_db
-                sd_hijack.model_hijack.embedding_db = EmbeddingDatabase("")
+                sd_hijack.model_hijack.embedding_db = EmbeddingDatabase()
                 p.do_not_reload_embeddings = True
             
             return process(p, min, max, w, h)
